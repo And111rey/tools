@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Счетчик отпуска</title>
+		<style>
+			# conclusion: {
+				font-size:30px;
+			}
+		 
+		</style>
+		
+	</head>
+<body bgcolor="#c0c0c0">
+
+
+ 
+
+
+
+	<form align ="center" id="dayOff" onsubmit="o();return false"/>
+		<input id = "q1" placeholder="введите число" type="text" ><br/><br/>
+		<input id = "q2" placeholder="ввидите месяц" type="text" ><br/><br/>
+		<input id = "q3" placeholder="ввидите год" type="text" ><br/><br/>
+		<input id = "q4" placeholder="отпускные и дополнительные дни" type="text" ><br/><br/>
+		
+		<input type="submit"/>
+	<hr/ color="red">
+	</form>
+	
+	
+	<form align ="center"/>
+		<input placeholder="Дата выхода"  id="conclusion"/>
+	</form>
+	
+	<script>
+	
+	var options = {
+  era: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+  timezone: 'UTC',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric'
+};
+	
+	
+		function o () {
+			var d = +document.getElementById("q1").value;
+			var m = +document.getElementById("q2").value;
+			var y = +document.getElementById("q3").value;
+			var s = +document.getElementById("q4").value;
+		
+			var res = new Date(y, (m-1), d + s).toLocaleString("ru", options);
+			 document.getElementById("conclusion").value+=res;//взята пустая строка, и в ее значение VALUE-что пистое, добавим  собраную строку
+		}
+		
+		
+	
+	</script>
+
+
+
+</body>
+</html>

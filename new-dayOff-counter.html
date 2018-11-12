@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title> canter of the Day Off </title>
+</head>
+<body>
+<script> 
+ 
+ 
+ var options = {
+  era: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+  timezone: 'UTC',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric'
+};
+ 
+//var e = +prompt("Кількість днів" );
+//var a = +prompt("В якому році відпустка", "2018");
+//var b = +prompt("В якому місяці", "01" );
+//var c = +prompt("з якого числа", "01");
+//var d = +prompt("Кількість святкових днів");
+//function level_1 (a,b,c,d,e) {
+//	return new Date(a, (b-1), c + e + d);
+//}
+//var lev = level_1(a,b,c,d,e);
+//function level_2 (f) {
+//	return f.toLocaleString("ru", options);
+//}
+//var lev1 = level_2(lev);
+//function level_3 (g) {
+// return g.slice(0,21);
+//}
+//alert (level_3(lev1));
+</script>
+
+
+
+	<form id="dayOff" onsubmit="o()"/>
+		<input id = "q1" placeholder="введите число" type="text"><hr color="green"/>
+		<input id = "q2" placeholder="ввидите месяц" type="text"><hr color="green"/>
+		<input id = "q3" placeholder="введите год" type="text"><hr color="green"/>
+		<input id = "q4" placeholder="количество дней" type="text"><hr color="green"/>
+		<input onclick="o" type="submit">
+	
+	</form>
+	
+	<script>
+		var d = +document.getElementById("q1").value;
+		var m = +document.getElementById("q2").value;
+		var y = +document.getElementById("q3").value;
+		var s = +document.getElementById("q4").value;
+		
+		function o () {
+			alert(d+m+y+s);
+		}
+		
+	
+	</script>
+	<br/>
+		<input placeholder="результат">
+
+
+
+</body>
+</html>
